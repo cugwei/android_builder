@@ -24,7 +24,7 @@ jobs:
           if [ ! -f "gradlew" ]; then gradle wrapper; fi
           chmod +x gradlew
           # ./gradlew assembleDebug --stacktrace
-          ./gradlew assembleRelease
+          ./gradlew assembleRelease --warning-mode all
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
